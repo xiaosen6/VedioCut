@@ -6,7 +6,12 @@ import subprocess
 from pathlib import Path
 
 
-def merge_with_drawtext(video_path: str, srt_path: str, output_path: str = None):
+from typing import Optional
+
+
+def merge_with_drawtext(
+    video_path: str, srt_path: str, output_path: Optional[str] = None
+):
     """
     使用drawtext滤镜合并字幕（更可靠，避免路径问题）
     """
